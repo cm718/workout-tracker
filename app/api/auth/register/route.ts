@@ -6,7 +6,7 @@ import User from "@/models/User"
 export async function POST(request: Request) {
   try {
     const { name, email, password } = await request.json()
-    debugger;
+
     // Validate input
     if (!name || !email || !password) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
